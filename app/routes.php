@@ -15,3 +15,8 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+// Route group for API versioning
+Route::group(array('prefix' => 'api/v2', 'before' => 'auth.basic'), function()
+{
+    Route::resource('customer', 'CustomerController');
+});
