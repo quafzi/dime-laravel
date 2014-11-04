@@ -34,5 +34,4 @@ class CreateProjectsTable extends Migration {
             $table->drop();
         });
     }
-
 }
