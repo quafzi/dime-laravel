@@ -122,6 +122,8 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+        'Dime\Api\ApiServiceProvider',
+        'Dime\Core\CoreServiceProvider',
 	),
 
 	/*
