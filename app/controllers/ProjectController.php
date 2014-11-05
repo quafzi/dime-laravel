@@ -1,6 +1,6 @@
 <?php
 
-class CustomerController extends \BaseController {
+class ProjectController extends \BaseController {
 
     /**
      * Display a listing of the resource.
@@ -9,11 +9,11 @@ class CustomerController extends \BaseController {
      */
     public function index()
     {
-        $customers = Customer::where('user_id', Auth::user()->id)->get();
+        $projects = Project::where('user_id', Auth::user()->id)->get();
 
         return Response::json([
             'error' => false,
-            'customers' => $customers->toArray()
+            'projects' => $projects->toArray()
         ], 200);
     }
 
@@ -36,20 +36,20 @@ class CustomerController extends \BaseController {
      */
     public function store()
     {
-        $customer = new Customer;
-        $customer->name = Request::get('name');
-        $customer->alias = Request::get('alias');
-        $customer->enabled = true;
-        $customer->user_id = Auth::user()->id;
+        $project = new Project;
+        $project->name = Request::get('name');
+        $project->alias = Request::get('alias');
+        $project->enabled = true;
+        $project->user_id = Auth::user()->id;
 
         // Validation and Filtering is sorely needed!!
         // Seriously, I'm a bad person for leaving that out.
 
-        $customer->save();
+        $project->save();
 
         return Response::json([
             'error' => false,
-            'customer' => $customer->toArray()
+            'project' => $project->toArray()
         ], 200);
     }
 
@@ -63,14 +63,14 @@ class CustomerController extends \BaseController {
     public function show($id)
     {
         // Make sure current user owns the requested resource
-        $customer = Customer::where('user_id', Auth::user()->id)
+        $project = Project::where('user_id', Auth::user()->id)
             ->where('id', $id)
             ->take(1)
             ->get();
 
         return Response::json([
             'error' => false,
-            'customer' => $customer->toArray()
+            'project' => $project->toArray()
         ], 200);
     }
 
@@ -95,15 +95,15 @@ class CustomerController extends \BaseController {
      */
     public function update($id)
     {
-        $customer = Customer::where('user_id', Auth::user()->id)->find($id);
+        $project = Project::where('user_id', Auth::user()->id)->find($id);
 
         foreach (['alias', 'name', 'enabled'] as $field) {
             if (Request::get($field)) {
-                $customer->$field = Request::get($field);
+                $project->$field = Request::get($field);
             }
         }
 
-        $customer->save();
+        $project->save();
 
         return Response::json([
             'error' => false,
@@ -120,13 +120,13 @@ class CustomerController extends \BaseController {
      */
     public function destroy($id)
     {
-        $customer = Customer::where('user_id', Auth::user()->id)->find($id);
+        $project = Project::where('user_id', Auth::user()->id)->find($id);
 
-        $customer->delete();
+        $project->delete();
 
         return Response::json([
             'error' => false,
-            'message' => 'customer deleted'
+            'message' => 'project deleted'
         ], 200);
     }
 }

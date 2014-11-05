@@ -1,5 +1,14 @@
 <?php
 
 class Customer extends Eloquent {
-    protected $table = 'customers';
+
+    public function projects()
+    {
+        return $this->hasMany('Project');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('User');
+    }
 }
