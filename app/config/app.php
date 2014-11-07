@@ -122,6 +122,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
+        'Eloquence\EloquenceServiceProvider',
         'Dime\Api\ApiServiceProvider',
         'Dime\Core\CoreServiceProvider',
 	),
