@@ -1,3 +1,7 @@
+Header set Access-Control-Allow-Origin *
+Header set Access-Control-Allow-Methods "GET, PUT, DELETE"
+Header set Access-Control-Allow-Credentials true
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews
