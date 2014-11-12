@@ -4,7 +4,12 @@
   "keywords": ["timetracking"],
   "license": "MIT",
   "require": {
-    "laravel/framework": "4.2.*"
+    "dime/api": "dev-master",
+    "dime/core": "dev-master",
+    "dime/parser": "dev-master",
+    "dime/frontend": "dev-master",
+    "laravel/framework": "4.2.*",
+    "kirkbushell/eloquence": "~1.1"
   },
   "authors": [
     {
