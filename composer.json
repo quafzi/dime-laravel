@@ -4,10 +4,7 @@
   "keywords": ["timetracking"],
   "license": "MIT",
   "require": {
-    "laravel/framework": "4.2.*",
-    "dime/core": "dev-master",
-    "dime/api": "dev-master",
-    "dime/frontend": "dev-master"
+    "laravel/framework": "4.2.*"
   },
   "authors": [
     {
@@ -18,8 +15,6 @@
   "autoload": {
     "classmap": [
       "app/commands",
-      "app/controllers",
-      "app/models",
       "app/database/migrations",
       "app/database/seeds",
       "app/tests/TestCase.php"

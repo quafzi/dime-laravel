@@ -105,7 +105,8 @@ return array(
 		'Illuminate\Database\DatabaseServiceProvider',
 		'Illuminate\Encryption\EncryptionServiceProvider',
 		'Illuminate\Filesystem\FilesystemServiceProvider',
-		'Illuminate\Hashing\HashServiceProvider',
+//		'Illuminate\Hashing\HashServiceProvider',
+		'Dime\Core\Hashing\DimeHashServiceProvider',
 		'Illuminate\Html\HtmlServiceProvider',
 		'Illuminate\Log\LogServiceProvider',
 		'Illuminate\Mail\MailServiceProvider',
@@ -123,8 +124,9 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 
         'Eloquence\EloquenceServiceProvider',
+		'Dime\Core\CoreServiceProvider',
+		'Dime\Parser\ParserServiceProvider',
         'Dime\Api\ApiServiceProvider',
-        'Dime\Core\CoreServiceProvider',
 	),
 
 	/*
