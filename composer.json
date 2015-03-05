@@ -11,6 +11,21 @@
     "laravel/framework": "4.2.*",
     "kirkbushell/eloquence": "~1.1"
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/phpugl/dime-laravel-api"
+    }, {
+      "type": "vcs",
+      "url": "https://github.com/phpugl/dime-laravel-core"
+    }, {
+      "type": "vcs",
+      "url": "https://github.com/phpugl/dime-frontend"
+    }, {
+      "type": "vcs",
+      "url": "https://github.com/phpugl/dime-parser"
+    }
+  ],
   "authors": [
     {
       "name": "Thomas Birke",
