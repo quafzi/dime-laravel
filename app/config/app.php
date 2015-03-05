@@ -127,6 +127,7 @@ return array(
 		'Dime\Core\CoreServiceProvider',
 		'Dime\Parser\ParserServiceProvider',
         'Dime\Api\ApiServiceProvider',
+        'Dime\Frontend\FrontendServiceProvider',
 	),
 
 	/*
